@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+        <script type="text/javascript" src="/eel.js"></script>
+        <script type="text/javascript">
+            function sleep(ms) {
+                return new Promise(resolve => setTimeout(resolve, ms));
+            }
+
+        async function run() {
+
+            while (1) {
+                let sec = await eel.ang("now.second")();
+                let min = await eel.ang("now.minute")();
+                let hou = await eel.ang("now.hour")();
+                let microsec = await eel.ang("now.microsecond")();
+
+
+                document.getElementById('seconds').style.transform = "rotate(" + sec + "deg)";
+                document.getElementById('minutes').style.transform = "rotate(" + min + "deg)";
+                document.getElementById('hours').style.transform = "rotate(" + hou + "deg)";
+                document.getElementById('corona1').style.transform = "rotate(" + microsec + "deg)";
+                document.getElementById('corona2').style.transform = "rotate(" + -microsec + "deg)";
+
+                sleep(10000)
+
+            } //second rotation
+
+        }
+        run();
+
+        </script>
+    </head>
+
+    <body>
+        <div id="corona1" class="corona"></div>
+        <div id="corona2" class="corona"></div>
+        <div id = "clock"></div>
+        <div id="seconds"></div>
+        <div id="minutes"></div>
+        <div id="hours"></div>
+
+</html>

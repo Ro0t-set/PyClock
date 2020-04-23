@@ -1,0 +1,75 @@
+html,
+body {
+    height: 800px;
+    width: 800px;
+    background: black;
+}
+
+.corona{
+    border-radius: 50%;
+    border-color: aquamarine;
+    border-top-color: black;
+    border-bottom-color: black;
+    border-style: solid;
+    height: 95%;
+    width: 90%;
+    position: absolute;
+    transform-origin: center center;
+
+
+}
+
+
+#clock{
+    width: 6%;
+    height: 6%;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+
+#seconds{
+    background-color: lime;
+    width: 40%;
+    height: 2%;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    transform-origin: left center;
+    position: absolute;
+    top : 50%;
+    left: 50%;
+    z-index: 2;
+}
+
+
+#minutes{
+    background-color: darkturquoise;
+    width: 30%;
+    height: 3%;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    transform-origin: left center;
+    position: absolute;
+    top : 50%;
+    left: 50%;
+    z-index: 1;
+
+}
+
+#hours{
+    background-color: orangered;
+    width: 20%;
+    height: 4%;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    transform-origin: left center;
+    position: absolute;
+    top : 50%;
+    left: 50%;
+    z-index: 0;
+}
